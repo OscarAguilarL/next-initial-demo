@@ -1,14 +1,14 @@
 import React from 'react';
-import Link from 'next/link';
 
 import styles from './Navbar.module.css';
+import { ActiveLink } from './ActiveLink';
 
 export const Navbar = () => {
   return (
     <nav className={styles['menu-container']}>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/contact">Contact</Link>
+      <ActiveLink href="/">Home</ActiveLink>
+      <ActiveLink href="/about">About</ActiveLink>
+      <ActiveLink href="/contact">Contact</ActiveLink>
     </nav>
   );
 };
