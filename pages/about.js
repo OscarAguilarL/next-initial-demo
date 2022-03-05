@@ -1,6 +1,7 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Link from 'next/link';
+import { Navbar } from '../components/Navbar';
+import styles from '../styles/Home.module.css';
 
 const AboutPage = () => {
   return (
@@ -11,10 +12,14 @@ const AboutPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
+
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Ir a <a href="/">Home</a>
-        </h1>
+        <h1>About Page</h1>
+
+        <h2 className={styles.title}>
+          Ir a <Link href="/">Home</Link>
+        </h2>
 
         <p className={styles.description}>
           Get started by editing{' '}
@@ -22,7 +27,7 @@ const AboutPage = () => {
         </p>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

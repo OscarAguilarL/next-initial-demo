@@ -1,5 +1,7 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Link from 'next/link';
+import { Navbar } from '../components/Navbar';
+import styles from '../styles/Home.module.css';
 
 export default function HomePage() {
   return (
@@ -10,10 +12,13 @@ export default function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
+
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Ir a <a href="/about">About</a>
-        </h1>
+        <h1>Home Page</h1>
+        <h2 className={styles.title}>
+          Ir a <Link href="/about">About</Link>
+        </h2>
 
         <p className={styles.description}>
           Get started by editing{' '}
@@ -21,5 +26,5 @@ export default function HomePage() {
         </p>
       </main>
     </div>
-  )
+  );
 }
