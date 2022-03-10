@@ -7,9 +7,9 @@ const style: React.CSSProperties = {
   textDecoration: 'underline',
 };
 
-interface Props {
+type Props = {
   href: string;
-}
+};
 
 export const ActiveLink: FC<Props> = ({ children, href }) => {
   const { asPath } = useRouter();

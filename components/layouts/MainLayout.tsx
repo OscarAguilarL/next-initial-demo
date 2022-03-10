@@ -4,12 +4,11 @@ import { Navbar } from '../Navbar';
 
 import styles from '../../styles/Home.module.css';
 
-interface Props extends FC {
-  children: JSX.Element | JSX.Element[];
+type Props = {
   title: string;
-}
+};
 
-export const MainLayout = ({ title, children }: Props) => {
+export const MainLayout: FC<Props> = ({ title, children }) => {
   return (
     <div className={styles.container}>
       <Head>
